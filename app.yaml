@@ -8,10 +8,13 @@ services:
     build_command: pip install -r requirements.txt
     run_command: gunicorn app:app
     resources:
-      cpu: 1       # You can specify 1x or 2x CPU, depending on what you need
-      memory: 512mb # Adjust memory to fit your needs
+      instance_size_slug: basic-1vcpu-1gb
     envs:
       - key: FLASK_ENV
         value: production
       - key: SECRET_KEY
-        value: your-super-secret-key
+        scope: run
+        secret: secret_key
+secrets:
+  - name: secret_key
+    value: your-super-secret-key
