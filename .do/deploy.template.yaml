@@ -6,7 +6,7 @@ spec:
     - name: web
       environment_slug: python
       github:
-        repo: Lumiwealth-Strategies/do_test
+        repo: abuttDO/do_test
         branch: main
       build_command: pip install -r requirements.txt
       run_command: gunicorn app:app
