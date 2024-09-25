@@ -1,17 +1,14 @@
 # .do/deploy.template.yaml
 
 spec:
-  name: do_test_app
+  name: do-test-app
   services:
-    - name: web
-      environment_slug: python
-      github:
-        repo: abuttDO/do_test
-        branch: main
-      build_command: pip install -r requirements.txt
-      run_command: gunicorn app:app
-      envs:
-        - key: FLASK_ENV
-          value: production
-        - key: SECRET_KEY
-          value: your-super-secret-key
+  - name: web
+    github:
+      repo: abuttDO/do_test
+      branch: main
+    envs:
+    - key: FLASK_ENV
+      value: production
+    - key: SECRET_KEY
+      value: your-super-secret-key
