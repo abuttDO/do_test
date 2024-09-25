@@ -5,8 +5,8 @@ spec:
   services:
     - name: web
       environment_slug: python
-      git:
-        repo_clone_url: https://github.com/Lumiwealth-Strategies/do_test
+      github:
+        repo: Lumiwealth-Strategies/do_test
         branch: main
       build_command: pip install -r requirements.txt
       run_command: gunicorn app:app
