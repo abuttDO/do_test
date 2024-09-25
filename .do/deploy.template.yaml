@@ -7,8 +7,6 @@ spec:
     github:
       repo: abuttDO/do_test
       branch: main
-      build_command: pip install -r requirements.txt
-      run_command: gunicorn app:app
     envs:
     - key: FLASK_ENV
       value: production
