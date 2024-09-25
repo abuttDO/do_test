@@ -1,7 +1,7 @@
 # .do/deploy.template.yaml
 
 spec:
-  name: do-test-app
+  name: do_test_app
   services:
   - name: web
     github:
